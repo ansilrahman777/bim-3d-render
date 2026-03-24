@@ -12,9 +12,11 @@ export default function CameraController({ target }) {
 
     const startPos = camera.position.clone();
 
-    // ✅ dynamic offset
-    const direction = new THREE.Vector3(5, 2, -5).normalize();
-    const distance = 600;
+    // direction for viewing
+    const direction = new THREE.Vector3(1, 1, 1).normalize();
+
+    // default distance
+    const distance = 10;
 
     const endPos = target.clone().add(direction.multiplyScalar(distance));
 
